@@ -70,7 +70,7 @@ export default class WriteStoryScreen extends React.Component{
             story:this.state.Story
         })
         this.setState({
-            StoryTitle:'',
+            StoryTitle:'',  
             Author:'',
             Story:''
         })

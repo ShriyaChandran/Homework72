@@ -5,11 +5,16 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 import ReadStoryScreen from './screens/ReadStoryScreen';
 import WriteStoryScreen from './screens/WriteStoryScreen';
 
-render(){
-  return(
-   
+export default class App extends React.Component{
+  render(){
+    return(
       <AppContainer/>
- 
-  )
+    )
+  }
 }
-}
+const switchNavigator = createSwitchNavigator({
+  ReadStoryScreen:{screen: ReadStoryScreen},
+  WriteStoryScreen:{screen: WriteStoryScreen}
+})
+
+const AppContainer =  createAppContainer(switchNavigator);
